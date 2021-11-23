@@ -1,9 +1,9 @@
 <template>
   <div class="d-flex my_container">
     
-    <CardText :heroData="heroData" ></CardText>
-    <div class="containerImg">    
-        <img :src= "heroData.src"  alt="">
+    <CardText :class="heroData.smallImgBlack ? 'bg-black' : ''" :heroData="heroData" ></CardText>
+    <div class="containerImg col-6" :class="heroData.smallImg  ? 'smallImg' : ''">    
+        <img  :src= "heroData.src"  alt="">
     </div>   
 
   </div>
@@ -25,15 +25,20 @@ props: {
 <style lang="scss" >
 .my_container{
     width: 100%;
-    height: 510px;
     .containerImg{
-        width: 55%;
+        width: 65%;
         height: 100%;
         img{
             height: 100%;
-            width:100%
+            width:100%;
+            object-fit: cover;
         }
     }
+}
+.smallImg{
+    width: 525px !important;
+
+
 }
 
 </style>

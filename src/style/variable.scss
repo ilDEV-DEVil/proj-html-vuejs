@@ -12,6 +12,16 @@
     margin-bottom: 35px;
 };
 
+.ps-150{
+    padding-left: 250px;
+    
+}
+
+.pe-150{
+    padding-right: 250px;
+    
+}
+
 @mixin blackButton {
     background-color: black;
     color: white;
@@ -19,3 +29,21 @@
     padding: 7px;
     font-size: 7px;
 }
+
+@mixin whiteButton {
+    background-color:white ;
+    color: black;
+    border: black 1px solid;
+    padding: 7px;
+    font-size: 7px;
+}
+
+.containerOne{
+    height: 510px;
+}
+
+.containerTwo{
+    height: 650px;
+    width: 1500px;
+
+  }
