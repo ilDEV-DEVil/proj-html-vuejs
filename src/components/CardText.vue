@@ -1,11 +1,14 @@
 <template>
-    <div class="CardText_container bg-black text-white d-flex justify-content-center align-items-center">
+    <div class="CardText_container d-flex justify-content-center align-items-center">
         <div class="containerText ">
-            <div class="my_border"></div>
-            <p>THE BEST RESTAURANT IN TOWN</p>
-            <h1>FINE DINING EXPERIENCE </h1>
-            <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum a officiis dolorem, cupiditate voluptatem saepe aliquam, explicabo sit eaque molestiae, ipsa tenetur et excepturi accusantium? Ea sapiente pariatur et officia.</p>
-            <button class="my_button mt-3">EXPLORE THE MENU</button>
+            <p>{{ heroData.overTitle }}</p>
+            <div class="containerTitle">
+                <div class="my_border"></div>
+                <h1>{{heroData.h1}}</h1>
+            </div>
+            <p class="mt-3">{{ heroData.text }}</p>
+            <button v-if="heroData.buttonText" class="my_button mt-3">{{ heroData.buttonText }}</button>
+            <img class="w-25" v-if="heroData.sign" :src="heroData.sign" alt="">
         </div>
     </div>
 </template>
@@ -13,6 +16,9 @@
 <script>
 export default {
 name: "CardText",
+props:{
+    heroData: Object
+}
 }
 </script>
 
@@ -22,16 +28,21 @@ name: "CardText",
     width: 45%;
     .containerText{
         max-width: 50%;
-        position: relative;
-        .my_border{
-            border-top:1px solid white ;
-            position: absolute;
-            top: 7px;
-            left: -40px;
-            width: 25px;
         }
+
         p{
             font-size: 10px;
+        }
+
+        .containerTitle{
+            position:relative;
+            display: inline-block;
+            .my_border{
+            border-top:1px solid white ;
+            position: absolute;
+            top: 25px;
+            left: -50px;
+            width: 40px;
         }
         .my_button{
             @include blackButton

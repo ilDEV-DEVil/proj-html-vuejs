@@ -1,9 +1,9 @@
 <template>
-  <div class="d-flex justify-content-between container fixed-top text-white pt-3">
+  <div class="d-flex justify-content-between w-100 text-white pt-3">
       <div class="imgContainer align-middle">
-        <img class="ps-5" src="../assets/img/logo-restaurant-2x-200x38.png" alt="">
+        <img class="" src="../assets/img/logo-restaurant-2x-200x38.png" alt="">
       </div>
-      <ul class="m-0 d-flex list-unstyled align-content-center pt-2" >
+      <ul class="m-0 d-flex list-unstyled align-content-center pt-2 pe-5" >
           <li class="px-3" v-for="item,i in linkList" :key="i">{{ item }}</li>
       </ul>
   </div>
@@ -24,6 +24,11 @@ data(){
 
 div{
     font-size: 11px;
+    position: relative;
+    img{
+        position:absolute;
+        left: 170px
+    }
     ul{
         color: lightgray;
     }
