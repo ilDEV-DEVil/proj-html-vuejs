@@ -1,9 +1,9 @@
 <template>
   <div class="d-flex my_container">
     
-    <CardText></CardText>
+    <CardText :heroData="heroData" ></CardText>
     <div class="containerImg">    
-        <img src="@/assets/img/slider52x.jpg"  alt="">
+        <img :src= "heroData.src"  alt="">
     </div>   
 
   </div>
@@ -16,10 +16,10 @@ import CardText from "./CardText.vue"
 export default {
 name: "TextImg",
 components: { CardText, },
-/* props: {
-    imgSrc : String,
+props: {
+    heroData: Object,
     }
- */}
+}
 </script>
 
 <style lang="scss" >
