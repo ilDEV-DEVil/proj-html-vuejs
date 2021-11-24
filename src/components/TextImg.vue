@@ -2,7 +2,7 @@
   <div class="d-flex my_container">
     
     <CardText :class="heroData.smallImgBlack ? 'bg-black' : ''" :heroData="heroData" ></CardText>
-    <div class="containerImg col-6" :class="heroData.smallImg  ? 'smallImg' : ''">    
+    <div class="containerImg col-6" :class="heroData.smallImg  ? 'smallImg' : ''" >    
         <img  :src= "heroData.src"  alt="">
     </div>   
 
@@ -37,8 +37,10 @@ props: {
 }
 .smallImg{
     width: 525px !important;
-
-
 }
+
+/* .bigImg{
+    width: 100% !important;
+} */
 
 </style>

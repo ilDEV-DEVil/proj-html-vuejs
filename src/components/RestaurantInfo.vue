@@ -22,7 +22,7 @@ props:{
 <style lang="scss" scoped>
 @import "../style/variable.scss";
 .infoContainer{
-    max-width: 200px;
+    max-width: 250px;
     .imgContainer{
         width: 80px;
         height: 60px;
@@ -36,6 +36,9 @@ props:{
     }
     button{
         @include whiteButton
+    }
+    h6{
+        font-family: 'Bebas Neue', cursive;
     }
 
 }
