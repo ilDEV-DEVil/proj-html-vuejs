@@ -35,7 +35,10 @@ props:{
         font-size: 10px;
     }
     button{
-        @include whiteButton
+        @include whiteButton;
+        &:hover{
+            @include blackButton
+        }
     }
     h6{
         font-family: 'Bebas Neue', cursive;

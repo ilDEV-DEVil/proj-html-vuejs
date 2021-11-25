@@ -28,6 +28,11 @@ props:{
 @import "../style/variable.scss";
 .CardText_container{
     width: 35%;
+    transition: all .2s ease-in-out; 
+    &:hover{
+        transform: scale(1.1);
+    }
+    
     .containerText{
         max-width: 50%;
         p{
@@ -53,7 +58,10 @@ props:{
     font-family: 'Work Sans', sans-serif;
 }
 .my_button{
- @include blackButton
-
+    @include blackButton;
+    &:hover{
+        @include whiteButton
+    }
+   
 }
 </style>

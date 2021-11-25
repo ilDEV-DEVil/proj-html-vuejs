@@ -1,24 +1,24 @@
 <template>
   <div id="app">
-    <!-- 1 -->
+    <!-- heroData 1 -->
     <div class="header pb-35">
       <NavBar class="navBar"></NavBar>
       <TextImg :heroData="heroData[0]" class="mb-35 text-white bg-black containerOne "></TextImg>
     </div>
 
-    <!-- 2 -->
+    <!-- heroData 2 -->
     <TextImg :heroData="heroData[1]" class="pb-35 text-black containerTwo justify-content-center"></TextImg>
 
 
-    <!-- 3 -->
+    <!-- heroData 3 -->
     <div class="d-flex justify-content-center pt-35 pb-35">
       <RestaurantInfo v-for="singleInfo,i in menuInfoData" :key="i" :menuInfoData="menuInfoData[i]" class="row"></RestaurantInfo>
     </div>
     
-    <!-- 4 -->
+    <!-- heroData 4 -->
     <TextImg :heroData="heroData[2]" class="flex-row-reverse bg-black text-white mt-35 mb-35 containerOne" ></TextImg>
 
-    <!-- 5 -->
+    <!-- heroData 5 -->
     <h3 class="text-center pt-35"><em>What critics say about us</em></h3>
     <TextImg :heroData="heroData[3]" class="pb-35 pt-35 text-white containerTwo justify-content-center flex-row-reverse"></TextImg>
 
@@ -36,13 +36,14 @@
       <Promotion v-for="singlePromotion,i in promotionData" :key="i" :singlePromotion="singlePromotion"> </Promotion>
     </div>
 
-    <!--  -->
+    <!-- heroData 6 -->
     <TextImg :heroData="heroData[6]" class="flex-row-reverse bg-black text-white mt-35 mb-35 containerOne" ></TextImg>
     
     <div class="d-flex justify-content-center pt-35 pb-35">
       <Menu v-for="singleMenu,i in menuPlatesData" :key="i" :singleMenu="singleMenu"></Menu>
     </div>
 
+  <!-- heroData 7 -->
     <div class="containerOne mt-35 relative">
       <img class="w-100 h-100 objectCover" src="./assets/img/hero42x.jpg" alt="">
       <!-- <CardText class="bg-black text-white mw-25 absolute" :heroData="heroData[7]"></CardText> -->

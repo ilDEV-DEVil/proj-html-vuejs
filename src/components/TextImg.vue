@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex my_container">
     
-    <CardText :class="heroData.smallImgBlack ? 'bg-black' : ''" :heroData="heroData" ></CardText>
+    <CardText :class="heroData.smallImgBlack ? 'bg-black' : ''" :heroData="heroData" class="hoverContainer" ></CardText>
     <div class="containerImg col-6" :class="heroData.smallImg  ? 'smallImg' : ''" >    
         <img  :src= "heroData.src"  alt="">
     </div>   
@@ -25,6 +25,9 @@ props: {
 <style lang="scss" >
 .my_container{
     width: 100%;
+    .hoverContainer:hover{
+        transform: scale(1.1);
+    }
     .containerImg{
         width: 65%;
         height: 100%;
